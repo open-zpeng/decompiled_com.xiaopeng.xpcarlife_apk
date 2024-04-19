@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaopeng.xui.widget.XRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@drawable/bg_car" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.xiaopeng.xui.widget.XButton android:id="@+id/btn_close" android:layout_width="0dp" android:layout_height="0dp" android:onClick="onClick" app:vuiAction="@string/vui_action_click" app:vuiDisableHitEffect="true" app:vuiElementType="BUTTON" app:vuiLabel="@string/vui_label_close" style="@style/XButton.Icon.Medium"/>
+    <com.xiaopeng.xui.widget.XImageView android:id="@+id/im_bg_car_webp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/webp_image_mt"/>
+    <com.xiaopeng.xui.widget.XImageView android:id="@+id/img_smart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/smart_text_ml" android:layout_marginTop="@dimen/smart_text_mt" android:src="@drawable/ic_smart_3rd_space"/>
+    <com.xiaopeng.xui.widget.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/bt_operating_guide_layout" android:background="@drawable/shape_operating_guide_bg" android:layout_marginTop="-10dp" android:layout_marginBottom="-10dp" android:layout_alignTop="@+id/img_smart" android:layout_alignBottom="@+id/img_smart" android:layout_marginEnd="@dimen/btn_margin_right_dp" android:layout_alignParentEnd="true" app:vuiAction="@string/vui_action_click" app:vuiElementType="BUTTON" app:vuiLabel="@string/vui_label_operating_guide" style="@style/operating_guide_btn_style">
+        <com.xiaopeng.xui.widget.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_introduce_video_icon" app:vuiMode="DISABLED"/>
+        <com.xiaopeng.xui.widget.XTextView android:textSize="@dimen/x_font_body_01_size" android:textColor="@color/text_color" android:gravity="center_horizontal" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vui_label_operating_guide" android:fontFamily="xpeng-fonts-regular" android:layout_marginStart="10dp" app:vuiMode="DISABLED"/>
+    </com.xiaopeng.xui.widget.XLinearLayout>
+    <com.xiaopeng.xui.widget.XTextView android:layout_marginTop="24dp" android:text="@string/smart_title" android:layout_below="@+id/img_smart" style="@style/smart_space_text_style"/>
+    <Space android:id="@+id/sp_cockpit" android:layout_width="0dp" android:layout_height="@dimen/cockpit_mode_mt"/>
+    <include layout="@layout/layout_cockpit_particulars_item"/>
+    <include layout="@layout/layout_smart_facility_item"/>
+</com.xiaopeng.xui.widget.XRelativeLayout>
